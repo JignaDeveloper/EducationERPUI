@@ -1,0 +1,16 @@
+{
+    "COMMON":{
+        "Next" : "Next",
+        "Previous" : "Previous",
+        "Home" : "Home",
+        "Setting": "Setting",
+        "Items_per_page": "Items per page",
+        "Ok" : "Ok",
+        "Cancel": "Cancel"
+    },
+    "STUDENT":{
+        "Student_List" : "Student List",
+        "Student_Details": "Student Details"
+
+    }
+}

@@ -1,0 +1,84 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-6"><i class="nav-icon fa fa-graduation-cap"></i> Student</div>
+                            <div class="col-sm-6" style="text-align:right;"><i class="fa fa-laptop"></i> Dashboard /
+                                Student</div>
+                        </div>
+                    </div>
+                 
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12 ml-3">
+                                <i class="fa fa-plus"></i> 
+                                <a href="addstudent" style="color:#707478" title="Add new Student"> Add New Student</a>
+                            </div>
+                        </div>
+
+                        <div class="card-body position-relative">
+                            <div class="ag-theme-balham" style="height:550px; width: 100%;">
+                                <app-ag-grid [ColumnDefs]="this.ColumnDefs" [RowData]="this.rowData"
+                                    [IsColumnsToFit]="true" (CellClicked)="onRowClicked($event)">
+                                </app-ag-grid>
+                            </div>
+                        </div>
+
+                        <!-- <div class="agGrid">
+                            <ag-grid-angular class="ag-theme-alpine"  style ="height: 300px;"  [rowData]="rowData"
+                                [columnDefs]="ColumnDefs"
+                                (gridSizeChanged)="studentListOnGridSizeChanged($event)"
+                                (rowClicked)='onRowClicked($event)'
+                                [overlayNoRowsTemplate]="studentListNoRowsTemplate">
+                            </ag-grid-angular>
+                        </div>
+
+                        <div class="table-pagination" *ngIf="isStudentListPaginationEnable">
+                            <div class="pagination">
+                                <div>
+                                    <span>Items per page:
+                                    </span>
+                                    <mat-form-field class="ml-8">
+                                        <mat-select name="pageSize"
+                                            (selectionChange)="studentListPageSizedUpdated($event.value)"
+                                            [formControl]="selectPageNumber">
+                                            <mat-option value="20" selected>20</mat-option>
+                                            <mat-option value="50">50</mat-option>
+                                            <mat-option value="100">100</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+
+                                    <span class="font_12 ml-4">{{fromRange }}-{{toRange}} of {{totalRecords}}</span>
+                                    <span class="arrow">
+                                        <button mat-icon-button [disabled]="studentListDisableBackwardArrow">
+                                            <mat-icon class="text-center font_8 lineHeight_8"
+                                                (click)="studentListFetchPreviousRecords()">arrow_back_ios</mat-icon>
+                                        </button>
+                                    </span>
+                                    <span class="arrow">
+                                        <button mat-icon-button [disabled]="studentListDisableForwardArrow">
+                                            <mat-icon class="text-center font_8 lineHeight_8"
+                                                (click)="studentListFetchNextRecords()">arrow_forward_ios</mat-icon>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>           -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class EventData {\n  constructor(name, value) {\n    this.name = name;\n    this.value = value;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
