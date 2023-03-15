@@ -30,6 +30,8 @@ jsconfig.json
 !.vscode/extensions.json
 **/*.code-workspace
 
+.angular/cache/15.1.5
+
 # Typings file.
 typings/
 

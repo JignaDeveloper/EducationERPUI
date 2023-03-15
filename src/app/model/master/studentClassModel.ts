@@ -1,12 +1,18 @@
-export class studentClassModel {
-    ClassId: number;
+export class StudentClassListQuery
+{
+  takeCount?:number;
+  skipCount?:number;
+}
+
+
+export class StudentClassModel {
     srno: number;
+    ClassId: number;
     Numeric_Class: string;
     Display_Class: string;
-    ClassTeacherId: number;
     ClassTeacherName: string;
-    ClassTeacherList: any[];
+    ClassTeacherId: number;
     Remarks: string;
     CreatedDate: Date;
     CreatedBy: number;
-    }
+}

@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { StudentClassComponent } from './components/student-class/student-class.component';
 import { AddStudentComponent } from './components/student/add-student/add-student.component';
 import { StudentComponent } from './components/student/student-list/student-list.component';
-import { LoginComponent } from './main/auth/login/login.component';
-import { studentClassModel } from './model/master/studentClassModel';
-import { AuthComponent } from './shared/layouts/app-layout/auth/auth.component';
 import { MainComponent } from './shared/layouts/app-layout/main/main.component';
 
 // const routes: Routes = [
@@ -35,6 +33,9 @@ const routes: Routes = [
       },
       {
         path: 'addstudent', component: AddStudentComponent
+      },
+      {
+        path: 'studentclass', component: StudentClassComponent
       }
     ]
    }
