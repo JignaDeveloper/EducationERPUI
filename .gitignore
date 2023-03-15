@@ -52,3 +52,4 @@ yarn-error.log*
 # Mac OSX Finder files.
 **/.DS_Store
 .DS_Store
+node_modules/__ngcc_entry_points__.json
