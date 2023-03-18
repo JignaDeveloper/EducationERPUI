@@ -33,6 +33,7 @@ import { ImageCellRenderer } from './components/image-cell-renderer/image-cell-r
 import { StudentDetailsComponent } from './components/student/student-details/student-details.component';
 import { AddStudentComponent } from './components/student/add-student/add-student.component';
 import { StudentClassComponent } from './components/student-class/student-class.component';
+import { PapertypeComponent } from './components/papertype/papertype.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { StudentClassComponent } from './components/student-class/student-class.
     ImageCellRenderer,
     StudentDetailsComponent,
     AddStudentComponent,
-    StudentClassComponent
+    StudentClassComponent,
+    PapertypeComponent
   ],
   exports: [
     TranslateModule

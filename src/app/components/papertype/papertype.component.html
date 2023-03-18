@@ -1,0 +1,100 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-18">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Add Paper Type</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form [formGroup]="PaperTypeForm">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label>Paper Type</label>
+                                            <input type="text" class="form-control" formControlName="Paper_Type" maxlength="50"
+                                                placeholder="Paper Type">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks</label>
+                                            <input class="form-control" formControlName="Remarks" type="text" maxlength="100"
+                                                placeholder="Remarks">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select  class="form-control" formControlName="Status" data-placeholder="Select Status" style="width: 100%;">
+                                                <option value="" selected>--Select Status--</option>
+                                                <option value="1" selected>Active</option>
+                                              <option value="2">InActive</option>
+                                            </select>
+                                          </div>
+                                    </div>
+                                    <!-- /.card-body -->
+        
+                                    <div class="card-footer">
+                                        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+        
+        
+                        </div>
+                        <!--/.col (left) -->
+        
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section>
+        </div>
+        <div class="col-sm-8">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-18">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Paper Type List</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+        
+                                <div class="card-body">
+                                    <div class="card-body position-relative">
+                                        <div class="ag-theme-balham" style="height:550px; width: 100%;">
+                                            <app-ag-grid [ColumnDefs]="this.ColumnDefs" [RowData]="this.rowData"
+                                                [IsColumnsToFit]="true">
+                                            </app-ag-grid>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!--/.col (left) -->
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section>
+        </div>
+    </div>
+  
+   
+</div>
