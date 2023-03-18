@@ -16,6 +16,7 @@ export class AppComponent {
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string;
+  
 
   eventBusSub?: Subscription;
 
