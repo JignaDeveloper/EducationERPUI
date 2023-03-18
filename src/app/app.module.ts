@@ -32,6 +32,7 @@ import {AgGridComponent} from './components/ag-grid/ag-grid.component';
 import { ImageCellRenderer } from './components/image-cell-renderer/image-cell-renderer.component';
 import { StudentDetailsComponent } from './components/student/student-details/student-details.component';
 import { AddStudentComponent } from './components/student/add-student/add-student.component';
+import { StudentClassComponent } from './components/student-class/student-class.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AddStudentComponent } from './components/student/add-student/add-studen
     AgGridComponent,
     ImageCellRenderer,
     StudentDetailsComponent,
-    AddStudentComponent
+    AddStudentComponent,
+    StudentClassComponent
   ],
   exports: [
     TranslateModule
