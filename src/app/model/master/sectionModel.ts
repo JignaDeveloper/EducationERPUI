@@ -1,16 +1,21 @@
+export class SectionListQuery
+{
+  takeCount?:number;
+  skipCount?:number;
+}
+
 export class SectionModel {
     srno: number;
-    SectionId: number;
+    //SectionId: number;
     SectionName: string;
-    Category: string;
-    Capacity: number;
+    //Category: string;
+    //Capacity: number;
     ClassId: number;
     ClassName: string;
-    ClassList: any[];
     TeacherId: number;
-    TeacherName: string;
-    TeacherList: any[];
+    TeacherName:string;
     Remarks: string;
+    Status : string; //change to number
     CreatedDate: Date;
     CreatedBy: number;
-    }
+}

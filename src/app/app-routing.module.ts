@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PapertypeComponent } from './components/papertype/papertype.component';
+import { SectionComponent } from './components/section/section.component';
 import { StudentClassComponent } from './components/student-class/student-class.component';
 import { AddStudentComponent } from './components/student/add-student/add-student.component';
 import { StudentComponent } from './components/student/student-list/student-list.component';
+import { SecondaryFrequencyEnum } from './core/master-data';
 import { MainComponent } from './shared/layouts/app-layout/main/main.component';
 
 // const routes: Routes = [
@@ -40,6 +42,9 @@ const routes: Routes = [
       },
       {
         path: 'papertype', component: PapertypeComponent
+      },
+      {
+        path: 'section', component: SectionComponent
       }
     ]
    }

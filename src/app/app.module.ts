@@ -34,6 +34,7 @@ import { StudentDetailsComponent } from './components/student/student-details/st
 import { AddStudentComponent } from './components/student/add-student/add-student.component';
 import { StudentClassComponent } from './components/student-class/student-class.component';
 import { PapertypeComponent } from './components/papertype/papertype.component';
+import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { PapertypeComponent } from './components/papertype/papertype.component';
     StudentDetailsComponent,
     AddStudentComponent,
     StudentClassComponent,
-    PapertypeComponent
+    PapertypeComponent,
+    SectionComponent
   ],
   exports: [
     TranslateModule
