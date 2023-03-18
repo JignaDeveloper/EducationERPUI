@@ -7,95 +7,91 @@
             </div>
         </div>
     </div>
-    <section class="content">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-sm-6"><i class="nav-icon fa fa-graduation-cap"></i> Class</div>
-                            <div class="col-sm-6" style="text-align:right;"><i class="fa fa-laptop"></i> Dashboard /
-                                Add Class</div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-18">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Add Class</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form [formGroup]="StudentClassForm">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label>Numeric Class</label>
+                                            <input type="text" class="form-control" formControlName="Numeric_Class" maxlength="50"
+                                                placeholder="Numeric Class">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Display Class</label>
+                                            <input class="form-control" formControlName="Display_Class" type="text" maxlength="50"
+                                                placeholder="Display Class">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks</label>
+                                            <input class="form-control" formControlName="Remarks" type="text" maxlength="100"
+                                                placeholder="Remarks">
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+        
+                                    <div class="card-footer">
+                                        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+        
+        
                         </div>
+                        <!--/.col (left) -->
+        
                     </div>
-
-
-                    <div class="card-body">
-                        <form [formGroup]="StudentClassForm">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Numeric Class</mat-label>
-                                        <input matInput formControlName="Numeric_Class" type="text" maxlength="50">
-                                        <mat-icon matSuffix></mat-icon>
-                                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                                        <mat-error
-                                        *ngIf="StudentClassForm.get('Numeric_Class')?.touched && StudentClassForm.get('Numeric_Class')?.hasError('required')">
-                                        Numeric Class is required.</mat-error>
-                                      </mat-form-field>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Display Class</mat-label>
-                                        <input matInput formControlName="Display_Class" type="text" maxlength="50">
-                                        <mat-icon matSuffix></mat-icon>
-                                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                                        <mat-error
-                                        *ngIf="StudentClassForm.get('Display_Class')?.touched && StudentClassForm.get('Display_Class')?.hasError('required')">
-                                        Display Class is required.</mat-error>
-                                      </mat-form-field>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Remarks</mat-label>
-                                        <input matInput formControlName="Remarks" type="text" maxlength="100">
-                                        <mat-icon matSuffix></mat-icon>
-                                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                                        <mat-error
-                                        *ngIf="StudentClassForm.get('Remarks')?.touched && StudentClassForm.get('Remarks')?.hasError('required')">
-                                        Remarks is required.</mat-error>
-                                      </mat-form-field>
-                                </div>
-
-                            </div>
-                            
-
-
-
-                            <div class="row">
-                                <div class="col-sm-3">
-                                <button mat-raised-button color="primary" (click)="submit()">Submit</button>
-                            </div>
-                            </div>
-                           
-
-                            <!-- <button mat-raised-button  color="primary" class="submitBtn" [disabled]="!addStudentForm.valid || errorMessage!=''"
-                            (click)="submit()">Submit</button> -->
-
-                        </form>
-                        <hr>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-12 ml-3">
-                                    <i class="fa fa-plus"></i> 
-                                    <a href="addstudentclass" style="color:#707478" title="Add New C;ass"> Add New Class</a>
-                                </div>
-                            </div>
-    
-                            <div class="card-body position-relative">
-                                <div class="ag-theme-balham" style="height:550px; width: 100%;">
-                                    <app-ag-grid [ColumnDefs]="this.ColumnDefs" [RowData]="this.rowData"
-                                        [IsColumnsToFit]="true">
-                                    </app-ag-grid>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section>
         </div>
-    </section>
+        <div class="col-sm-8">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-18">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Class List</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+        
+                                <div class="card-body">
+                                    <div class="card-body position-relative">
+                                        <div class="ag-theme-balham" style="height:550px; width: 100%;">
+                                            <app-ag-grid [ColumnDefs]="this.ColumnDefs" [RowData]="this.rowData"
+                                                [IsColumnsToFit]="true">
+                                            </app-ag-grid>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!--/.col (left) -->
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section>
+        </div>
+    </div>
+  
+   
 </div>
