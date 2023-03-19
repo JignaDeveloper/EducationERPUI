@@ -35,6 +35,10 @@ import { AddStudentComponent } from './components/student/add-student/add-studen
 import { StudentClassComponent } from './components/student-class/student-class.component';
 import { PapertypeComponent } from './components/papertype/papertype.component';
 import { SectionComponent } from './components/section/section.component';
+import { SubjectComponent } from './components/subject/subject.component';
+import { ReligionComponent } from './components/religion/religion.component';
+import { CasteComponent } from './components/caste/caste.component';
+import { ProfessionComponent } from './components/profession/profession.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { SectionComponent } from './components/section/section.component';
     AddStudentComponent,
     StudentClassComponent,
     PapertypeComponent,
-    SectionComponent
+    SectionComponent,
+    SubjectComponent,
+    ReligionComponent,
+    CasteComponent,
+    ProfessionComponent
   ],
   exports: [
     TranslateModule

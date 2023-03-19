@@ -18,50 +18,30 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Add Section</h3>
+                                    <h3 class="card-title">Add Profession</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form [formGroup]="subjectForm">
+                                <form [formGroup]="ProfessionForm">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label>Subject</label>
-                                            <select  class="form-control" formControlName="Subject" data-placeholder="Select Class" style="width: 100%;">
-                                                <option value="" selected>--Select Class--</option>
-                                                <option value="1" selected>Hindi</option>
-                                              <option value="2">English</option>
+                                            <label>Profession</label>
+                                            <select  class="form-control" formControlName="ProfessionName" data-placeholder="Select Class" style="width: 100%;">
+                                                <option value="" selected>--Select Profession--</option>
+                                                <option value="1" selected>doctor</option>
+                                              <option value="2">engineer</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select  class="form-control" formControlName="Status" data-placeholder="Select Status" style="width: 100%;">
+                                                <option value="" selected>--Select Status--</option>
+                                                <option value="1" selected>Active</option>
+                                              <option value="2">InActive</option>
                                             </select>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label>Class Id</label>
-                                            <input type="text" class="form-control" formControlName="ClassId" maxlength="50"
-                                                placeholder="Section Name">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Section Id</label>
-                                            <input type="text" class="form-control" formControlName="SectionId" maxlength="50"
-                                                placeholder="Section Name">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>PaperTypeId</label>
-                                            <select  class="form-control" formControlName="PaperTypeId" data-placeholder="Select Class" style="width: 100%;">
-                                                <option value="" selected>--Select PaperTypeId--</option>
-                                                <option value="1" selected>Deepak singh</option>
-                                              <option value="2">Rejesh Gupta</option>
-                                            </select>
-                                        </div>
                                         
-                                        <div class="form-group">
-                                            <label>IsOptional</label>
-                                            <select  class="form-control" formControlName="IsOptional" data-placeholder="Select Status" style="width: 100%;">
-                                                <option value="" selected>--Select SectionId--</option>
-                                                <option value="1" selected>true</option>
-                                              <option value="2">false</option>
-                                            </select>
-                                        </div>
                                     </div>
                                     <!-- /.card-body -->
         
@@ -90,7 +70,7 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Section List</h3>
+                                    <h3 class="card-title">ProfessionList</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
