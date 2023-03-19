@@ -155,5 +155,6 @@ export class StudentClassComponent implements OnInit {
 
     //Save API Call
     alert('Student Class Added Successfully.');
+    this.StudentClassForm.reset();
   }
 }

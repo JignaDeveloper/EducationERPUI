@@ -18,26 +18,47 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Add Class</h3>
+                                    <h3 class="card-title">Add Section</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form [formGroup]="StudentClassForm">
+                                <form [formGroup]="SectionForm">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label>Numeric Class</label>
-                                            <input type="text" class="form-control" formControlName="Numeric_Class" maxlength="50"
-                                                placeholder="Numeric Class">
+                                            <label>Class</label>
+                                            <select  class="form-control" formControlName="ClassId" data-placeholder="Select Class" style="width: 100%;">
+                                                <option value="" selected>--Select Class--</option>
+                                                <option value="1" selected>Class 1</option>
+                                              <option value="2">Class 2</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Section Name</label>
+                                            <input type="text" class="form-control" formControlName="SectionName" maxlength="50"
+                                                placeholder="Section Name">
                                         </div>
                                         <div class="form-group">
-                                            <label>Display Class</label>
-                                            <input class="form-control" formControlName="Display_Class" type="text" maxlength="50"
-                                                placeholder="Display Class">
+                                            <label>Section Teacher</label>
+                                            <select  class="form-control" formControlName="TeacherId" data-placeholder="Select Class" style="width: 100%;">
+                                                <option value="" selected>--Select Teacher--</option>
+                                                <option value="1" selected>Deepak singh</option>
+                                              <option value="2">Rejesh Gupta</option>
+                                            </select>
                                         </div>
+
                                         <div class="form-group">
                                             <label>Remarks</label>
                                             <input class="form-control" formControlName="Remarks" type="text" maxlength="100"
                                                 placeholder="Remarks">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select  class="form-control" formControlName="Status" data-placeholder="Select Status" style="width: 100%;">
+                                                <option value="" selected>--Select Status--</option>
+                                                <option value="1" selected>Active</option>
+                                              <option value="2">InActive</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
@@ -67,7 +88,7 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Class List</h3>
+                                    <h3 class="card-title">Section List</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
